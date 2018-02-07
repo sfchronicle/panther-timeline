@@ -14,16 +14,15 @@
     <div class="event left">
       <div class="timestamp-circle right"></div>
       <div class="timestamp"><%= d.Year %></div>
-      <div class="hed"><%= d.Hed %></div>
       <div class="description"><%= d.Text %></div>
       <% if (d.Image) { %>
         <div class="timeline-img <%=d.Class%>">
           <img src="http://ww2.hdnux.com/photos/61/64/55/<%= d.Image %>/3/500x0.jpg">
-          <div class="caption"><%=d.Photographer%></div>
+          <div class="caption"><%=d.Caption%>  <span class="byline"><%=d.Photographer%></span></div>
         </div>
       <% } %>
       <% if (d.Video) { %>
-        <div class="embedded-video"><iframe width="100%" height="315" src="<%=d.Video%>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+        <div class="embedded-video"><iframe width="100%" height="220" src="<%=d.Video%>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
       <% } %>
       <% if (d.Link){ %>
         <div class="read-more-link"><a href="<%=d.Link%>" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i> Read more</a></div>
@@ -35,16 +34,15 @@
     <div class="event right">
       <div class="timestamp-circle left"></div>
       <div class="timestamp"><%= d.Year %></div>
-      <div class="hed"><%= d.Hed %></div>
       <div class="description"><%= d.Text %></div>
       <% if (d.Image) { %>
         <div class="timeline-img <%=d.Class%>">
           <img src="//ww2.hdnux.com/photos/61/64/55/<%= d.Image %>/3/500x0.jpg">
-          <div class="caption"><%=d.Photographer%></div>
+          <div class="caption"><%=d.Caption%>  <span class="byline"><%=d.Photographer%></span></div>
         </div>
       <% } %>
       <% if (d.Video) { %>
-        <div class="embedded-video"><iframe width="100%" height="315" src="<%=d.Video%>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+        <div class="embedded-video"><iframe width="100%" height="220" src="<%=d.Video%>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
       <% } %>
     </div>
   <% } %>
@@ -59,4 +57,3 @@
 
 
 <script src="app.js" async></script>
-<%= t.include("partials/_footer.html") %>
